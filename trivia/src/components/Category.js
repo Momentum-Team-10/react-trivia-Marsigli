@@ -2,7 +2,7 @@ import React from 'react'
 
 const Category = (props) => {
     return (
-        <div onClick={props.onClick}>{props.name}</div>
+        <button onClick={props.onClick}>{props.name}</button>
     )
 }
 

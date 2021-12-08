@@ -4,13 +4,38 @@
 
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100px;
+  background-image: url(./components/header_background.jpeg);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content:center;
+  background-size: 1fr;
+  height: 250px;
+  border: 2px solid;
+  color: rgb(37, 194, 242);
+  font-size: 60px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+
 }
 
+.directions {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  margin-bottom: 10px;
+}
+
+.category_list {
+  text-align: center;
+  border: 2px solid;
+  margin: 0px 550px;
+}
+
+.home {
+  width:50px;
+  float:right;
+  top:-40px;
+}
