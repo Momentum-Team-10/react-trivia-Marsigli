@@ -29,13 +29,37 @@
 }
 
 .category_list {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  border: 2px solid;
+  align-items: center;
   margin: 0px 550px;
 }
 
 .home {
+  color: white;
+  background-color: rgb(27, 102, 230);
   width:50px;
   float:right;
   top:-40px;
+}
+
+.category_button {
+  margin: 5px 5px;
+}
+
+.question {
+  text-align: center;
+  border: black solid;
+}
+
+.answers {
+  margin: 5px;
+}
+
+.answers_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
