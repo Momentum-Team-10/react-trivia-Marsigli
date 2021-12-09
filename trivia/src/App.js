@@ -39,8 +39,8 @@ const App = () => {
         </header>
       </div>
       <div className="directions">
-        <h3>Welcome to Trivia Night!! Below are several categories that you can choose your trivia questions to generate from. Your questions will have four multiple choice answers below it for you to select from. At any time you can return to the home screen by pressing the home button in the top right hand corner of your screen. Good luck!!!</h3>
-      </div>
+      <h3>Welcome to Trivia Night!! Below are several categories that you can choose your trivia questions to generate from. Your questions will have four multiple choice answers below it for you to select from. At any time you can return to the home screen by pressing the home button under the answers. Good luck!!!</h3>
+      </div> 
       <div>
       {/* Ternary Operator to handle the question view. This switches between the question and the category view. If the question has data then it will change the view to the question view and list out the answers. If not this will continue to show the category list ul... */}
         {question ? <Question question={question.question} correctAnswer={question.correct_answer} incorrectAnswers={question.incorrect_answers} incrementScore={()=> {
@@ -55,9 +55,12 @@ const App = () => {
               // made the getQuestion to a helper function so we could call it once someone clicks a category
               getQuestion(category.id)}}/>
           ))}
+          
         </ul>)}  
         {/* added a button for the user to go back to the home page after a question was rendered. To do this we had to change the state to null. This conditional rendering below will only appear if a question is present */}
-        {question && <button className="home" onClick={() => setQuestion(null)}>Home</button>}
+        <div className="home_container">
+          {question && <button className="home" onClick={() => setQuestion(null)}>Home</button>}
+        </div>
       </div>
       <div className="score">
         Score: {score}
